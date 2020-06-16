@@ -1,0 +1,210 @@
+@charset "uth-8";
+
+p {
+	margin: 0;
+}
+#page_top {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+}
+#page_top a {
+    background-color: #999;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 60px;
+    height: 60px;
+    padding: 17px 0;
+}
+#page_top a:hover {
+    background-color: #666;
+    text-decoration: none;
+}
+
+
+.toggle_wrap:last-of-type {
+  border-bottom: 1px solid #ccc;
+}
+.toggle_switch {
+  position: relative;
+  cursor: pointer;
+  padding: 15px 10px;
+  border-top: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+.toggle_switch.open {
+  border-bottom: 1px solid #eee;
+}
+.toggle_switch:hover {
+  background-color: #eee;
+}
+.toggle_switch::after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 11px;
+  background: url(http://agdemo.net/sample/toggle/img/arrow_down.svg) no-repeat center center;
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  transition: transform .2s;
+}
+.toggle_switch.open::after {
+  transform: rotateZ(180deg);
+  top: 46%;
+}
+.toggle_contents {
+  display: none;
+  padding: 5px 10px;
+}
+#modal-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 1
+ }
+
+.navbar-nav {
+	border-top: 1px solid #ccc;
+    margin-top: 8px;
+    padding-top: 8px;
+}
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+#sidebarCollapse {
+    width: 40px;
+    height: 40px;
+    background: #f5f5f5;
+}
+
+#sidebarCollapse span {
+    width: 80%;
+    height: 2px;
+    display: block;
+    background: #555;
+    transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+    transition-delay: 0.2s;
+    margin: 5px auto;
+}
+#sidebarCollapse span {
+    transform: none;
+    opacity: 1;
+}
+#sidebarCollapse.active span:first-of-type {
+    transform: rotate(45deg) translate(2px, 2px);
+    margin: 0 auto;
+}
+#sidebarCollapse.active span:nth-of-type(2) {
+    opacity: 0;
+    margin: 0 auto;
+}
+#sidebarCollapse.active span:last-of-type {
+    transform: rotate(-45deg) translate(1px, -1px);
+    margin: 0 auto;
+}
+
+.dropdown-menu {
+	display: none !important;
+}
+.dropdown-menu.open {
+	display: block !important;
+}
+.dropdown-menu.d-flex.open {
+	display: flex!important;
+}
+/*左右の矢印の色を変える*/
+.slick-prev:before,
+.slick-next:before {
+    color: #999;
+    font-size: 30px;
+}
+/*左右の矢印の位置を変える*/
+.slick-next {
+    right: 20px;
+    z-index: 99;
+}
+.slick-prev {
+     left: 15px;
+    z-index: 100;
+}
+.slick-prev, .slick-next {
+	width: 30px;
+	height: 30px;
+}
+/*スライド数のドットの色を変える*/
+.slick-dots li.slick-active button:before,
+.slick-dots li button:before {
+    color: #444;
+}
+.slick-dots li button:before {
+	font-size: 12px;
+}
+.thumb-item-nav img:hover {
+	opacity: 0.7;
+}
+
+.thumb-item { margin: 0 auto 5px; padding: 0;}
+.thumb-item img,.thumb-item-nav img{ width: 100%;}
+.thumb-item-nav { max-width: 700px; margin: 0 auto;}
+.thumb-item-nav li { margin: 5px;}
+.thumb-item-nav .slick-next { right: 20px; z-index: 100;}
+.thumb-item-nav .slick-prev { left: 15px; z-index: 100;}
+.thumb-item-nav .slick-current { opacity: 0.5;}
+.thumb-item-nav div div div { cursor: pointer;}
+
+.active {
+  display: block;
+}
+.tab-content>.tab-pane.texttab-show , .tab-content>.tab-pane.imgtab-show {
+	display: block;
+}
+.tab-content >.tab-pane.show {
+	display: block;
+}
+.tab-pane, .img-pane {
+	display: none;
+	border: 5px solid #f8f9fa;
+}
+.img-pane {
+	border: 5px solid #ccc;
+}
+.tab-wrap .nav-item a {
+	color: #ccc;
+	background-color: #fff;
+	border-color: #e9ecef #e9ecef #f8f9fa #e9ecef;
+}
+.tab-wrap .nav-item.active a {
+	color: #212529;
+	background-color: #f8f9fa;
+}
+.tab-wrap .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+	background-color: #f8f9fa;
+	border-color: #e9ecef #e9ecef #f8f9fa #e9ecef;
+}
+.tab-wrap .nav-item.active:hover a {
+	opacity: 1;
+}
+.tab-wrap .nav-tabs .nav-item + .nav-item {
+	margin-left: 1px;
+}
+.imgtab-wrap .nav-tabs .nav-item img {
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+}
+.imgtab-wrap .nav-tabs .nav-item.active img {
+	opacity: 1;
+}

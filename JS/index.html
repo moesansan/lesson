@@ -1,0 +1,391 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="discription" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<meta name="application-name" content="Javascript研修">
+<title>Javascript研修</title>
+<!-- Bootstrap CSS 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link href="js/slick-theme.css" rel="stylesheet" type="text/css">
+<link href="js/slick.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/common.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+</head>
+<body>
+<div id="container" class="container position-relative pb-5">
+	<h1 class="mt-5">Javascript研修</h1>
+	<section class="mt-5">
+		<h2 class="mb-3">アコーディオン</h2>
+		<div class="accordion" id="accordion">
+			<div class="toggle_wrap">
+			  <div class="toggle_switch">
+			    <p>クリックでオープン1</p>
+			  </div>
+			  <div class="toggle_contents">
+			    <p class="m-2">コンテンツ1</p>
+			  </div>    
+			</div>
+			<div class="toggle_wrap">
+			  <div class="toggle_switch">
+			    <p>クリックでオープン2</p>
+			  </div>
+			  <div class="toggle_contents">
+			    <p class="m-2">コンテンツ2</p>
+			  </div>    
+			</div>
+			<div class="toggle_wrap">
+			  <div class="toggle_switch">
+			    <p>クリックでオープン3</p>
+			  </div>
+			  <div class="toggle_contents">
+			    <p class="m-2">コンテンツ3</p>
+			  </div>    
+			</div>
+		</div><!-- /#accordion -->	
+	</section>
+	<section class="mt-5">
+		<h2 class="mb-3">モーダルウィンドウ（ライトボックス）</h2>
+		<div class="mordal_btn btn btn-primary" role="button" id="login-show">モーダルボタン</div>
+		<div id="modal-overlay"></div>
+		<div class="modal">
+			<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" id="close-modal" class="close" data-dismiss="modal" aria-label="閉じる"><span aria-hidden="true">&times;</span>
+        			</button>
+				</div>
+				<div class="modal-body">
+					<p class="text-center m-4">サンプル</p>
+				</div>
+			</div>
+			</div>
+		</div>
+	</section>
+	<section class="mt-5">
+		<h2 class="mb-3">ハンバーガーメニュー</h2>
+		<div class="nav-wrap">
+			<nav class="navbar navbar-light bg-light">
+			    <p class="navbar-brand">ナビゲーションバー</p>
+			    <button type="button" id="sidebarCollapse" class="navbar-btn">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+
+			    <div class="collapse navbar-collapse bg-light" id="navbar">
+			      <ul class="navbar-nav mr-auto">
+			        <li class="nav-item active">
+			          <a class="nav-link" href="#">ホーム <span class="sr-only">(現位置)</span></a>
+			        </li>
+			        <li class="nav-item">
+			          <a class="nav-link" href="#">リンク</a>
+			        </li>
+			        <li class="nav-item">
+			          <a class="nav-link" href="#">リンク</a>
+			        </li>
+			        <li class="nav-item">
+			          <a class="nav-link" href="#">リンク</a>
+			        </li>
+			      </ul>
+			    </div>
+			</nav>
+		</div>
+	</section>
+	<section class="mt-5">
+		<h2 class="mb-3">メガメニュー</h2>
+		<div class="menu-wrap mb-5">
+			<div class="btn-group mb-5">
+			<ul class="dropdown p-0">
+			  <li class="btn dropdown-toggle bg-light p-3" href="" role="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    ドロップダウンリンク
+			  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+			    <li><a class="dropdown-item" href="#">メニュー1</a></li>
+			    <li><a class="dropdown-item" href="#">メニュー2</a></li>
+			    <li><a class="dropdown-item" href="#">メニュー3</a></li>
+			  </ul><!-- /.dropdown-menu -->
+			  </li>
+			</ul><!-- /.dropdown -->
+			<ul class="dropdown p-0">
+			  <li class="btn dropdown-toggle bg-light p-3" href="" role="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    ドロップダウンリンク
+			  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+			    <li><a class="dropdown-item" href="#">メニュー1</a></li>
+			    <li><a class="dropdown-item" href="#">メニュー2</a></li>
+			    <li><a class="dropdown-item" href="#">メニュー3</a></li>
+			  </ul><!-- /.dropdown-menu -->
+			  </li>
+			</ul><!-- /.dropdown -->
+			<ul class="dropdown p-0">
+			  <li class="btn dropdown-toggle bg-light p-3" href="" role="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    ドロップダウンリンク
+			  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+			    <li><a class="dropdown-item" href="#">メニュー1</a></li>
+			    <li><a class="dropdown-item" href="#">メニュー2</a></li>
+			    <li><a class="dropdown-item" href="#">メニュー3</a></li>
+			  </ul><!-- /.dropdown-menu -->
+			  </li>
+			</ul><!-- /.dropdown -->
+			<ul class="dropdown p-0">
+			  <li class="btn dropdown-toggle bg-light p-3" href="" role="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    ドロップダウンリンク
+			  <ul class="dropdown-menu d-flex flex-wrap" aria-labelledby="dropdownMenuLink" style="width: 236px;">
+			    <li><a class="dropdown-item" href="#">メニュー1</a></li>
+			    <li><a class="dropdown-item" href="#">メニュー2</a></li>
+			    <li><a class="dropdown-item" href="#">メニュー3</a></li>
+			    <li><a class="dropdown-item" href="#">メニュー4</a></li>
+			    <li class="dropdown-toggle dropdown-item" href="" role="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    メニュー5<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+			    <li><a class="dropdown-item" href="#">メニュー1</a></li>
+			    <li><a class="dropdown-item" href="#">メニュー2</a></li>
+			    <li><a class="dropdown-item" href="#">メニュー3</a></li>
+			  </ul><!-- /.dropdown-menu --></li>
+			  </ul><!-- /.dropdown-menu -->
+			  </li>
+			</ul><!-- /.dropdown -->
+			</div>
+		</div>
+	</section>
+	<section class="mt-5">
+		<h2 class="mb-3">スライドショー（スライダー）</h2>
+		<h3>（1）オート系：決められた時間で自動的に写真が切り替わる</h3>
+		<div class="slide-wrap mb-5">
+			<div id="slider01" class="slider">
+				<div><img class="d-block w-100" src="http://placehold.it/930x400" alt="第1スライド"></div>
+				<div><img class="d-block w-100" src="http://placehold.it/930x400" alt="第2スライド"></div>
+				<div><img class="d-block w-100" src="http://placehold.it/930x400" alt="第3スライド"></div>
+			</div>
+		</div>
+		<h3>（2）ライトボタン系：ナビゲーションがボタン形式のもの</h3>
+		<div class="slide-wrap mb-5">
+			<div id="slider02" class="slider">
+				<div><img class="d-block w-100" src="http://placehold.it/930x400" alt="第1スライド"></div>
+				<div><img class="d-block w-100" src="http://placehold.it/930x400" alt="第2スライド"></div>
+				<div><img class="d-block w-100" src="http://placehold.it/930x400" alt="第3スライド"></div>
+			</div>
+		</div>
+		<h3>（3）バナー表示系：ナビゲーションが小さな写真（サムネイル）形式のもの</h3>
+		<div class="slide-wrap mb-5">
+			<div id="slider03" class="thumb-item">
+				<div><img class="d-block w-100" src="http://placehold.it/930x400" alt="第1スライド"></div>
+				<div><img class="d-block w-100" src="http://placehold.it/930x400" alt="第2スライド"></div>
+				<div><img class="d-block w-100" src="http://placehold.it/930x400" alt="第3スライド"></div>
+				<div><img class="d-block w-100" src="http://placehold.it/930x400" alt="第4スライド"></div>
+			</div>
+			<div class="thumb-item-nav">
+				<div><img class="" src="http://placehold.it/930x400" alt="第1スライド"></div>
+				<div><img class="" src="http://placehold.it/930x400" alt="第2スライド"></div>
+				<div><img class="" src="http://placehold.it/930x400" alt="第3スライド"></div>
+				<div><img class="" src="http://placehold.it/930x400" alt="第4スライド"></div>
+			</div>
+		</div>
+	</section>
+	<section class="mt-5">
+		<h2 class="mb-3">タブ切り替え</h2>
+		<h3>テキストタブ</h3>
+		<div class="tab-wrap">
+		<div class="texttab-wrap mb-5">
+	        <ul class="nav nav-tabs nav-fill">
+	          <li class="nav-item active"><a class="nav-link">タブ1</a></li>
+	          <li class="nav-item"><a class="nav-link">タブ2</a></li>
+	          <li class="nav-item"><a class="nav-link">タブ3</a></li>
+	          <li class="nav-item"><a class="nav-link">タブ4</a></li> 
+	        </ul>
+	        <div class="tab-content">
+	        	<div class="tab-pane text-pane px-3 py-4 texttab-show">
+	        		<p>コンテンツ1</p>
+	        	</div>
+	        	<div class="tab-pane text-pane p-3 py-4">
+	        		<p>コンテンツ2</p>
+	        	</div>
+	        	<div class="tab-pane text-pane p-3 py-4">
+	        		<p>コンテンツ3</p>
+	        	</div>
+	        	<div class="tab-pane text-pane p-3 py-4">
+	        		<p>コンテンツ4</p>
+	        	</div>
+	        </div>
+		</div>
+		<h3>画像タブ</h3>
+		<div class="imgtab-wrap mb-5">
+	        <ul class="nav nav-tabs nav-fill">
+	          <li class="nav-item active"><img class="d-block w-100" src="http://placehold.it/200x40" alt="タブ1"></li>
+	          <li class="nav-item"><img class="d-block w-100" src="http://placehold.it/200x40" alt="タブ2"></li>
+	          <li class="nav-item"><img class="d-block w-100" src="http://placehold.it/200x40" alt="タブ3"></li>
+	          <li class="nav-item"><img class="d-block w-100" src="http://placehold.it/200x40" alt="タブ4"></li> 
+	        </ul>
+	        <div class="tab-content">
+	        	<div class="tab-pane img-pane px-3 py-4 imgtab-show">
+	        		<p>コンテンツ1</p>
+	        	</div>
+	        	<div class="tab-pane img-pane p-3 py-4">
+	        		<p>コンテンツ2</p>
+	        	</div>
+	        	<div class="tab-pane img-pane p-3 py-4">
+	        		<p>コンテンツ3</p>
+	        	</div>
+	        	<div class="tab-pane img-pane p-3 py-4">
+	        		<p>コンテンツ4</p>
+	        	</div>
+	        </div>
+		</div>
+		</div>
+	</section>
+	<section class="mt-5">
+		<h2 class="mb-3">Ajax、json</h2>
+		<div class="Ajax-wrap">
+			<ul id="output"></ul>
+		</div>
+	</section>
+	<p id="page_top"><a href="#">TOP</a></p>
+</div>
+<script type="text/javascript">
+	//スムーススクロール
+	$(function(){
+	  var pagetop = $('#page_top');
+	  // ボタン非表示
+	  pagetop.hide();
+
+	  // 10px スクロールしたらボタン表示
+	  $(window).scroll(function () {
+	     if ($(this).scrollTop() > 10) {
+	          pagetop.fadeIn();
+	     } else {
+	          pagetop.fadeOut();
+	     }
+	 	});
+	  //pagetop.click(function () {
+	     //$('body, html').animate({ scrollTop: 0 }, 500);
+	     //return false;
+	  //});
+	});
+	//TOPへ戻る
+     $(function(){
+        // #で始まるリンクをクリックしたら実行されます
+        $('a[href^="#"]').click(function() {
+          // スクロールの速度
+          var speed = 500; // ミリ秒で記述
+          var href= $(this).attr("href");
+          var target = $(href == "#" || href == "" ? 'html' : href);
+          var position = target.offset().top;
+          $('body,html').animate({scrollTop:position}, speed, 'swing');
+          return false;
+        });
+     });
+	//アコーディオン
+	$(function(){
+		$('.toggle_switch').on('click',function(){
+	  		$(this).toggleClass('open');
+	  		$(this).next('.toggle_contents').slideToggle();
+		});
+	});
+	//モーダル
+	$('.mordal_btn').click(function() {
+		$('#modal-overlay, .modal').fadeIn();
+	});
+	$('#close-modal').click(function() {
+		$('#modal-overlay, .modal').fadeOut();
+	});
+	//ハンバーガーメニュー
+	$('#sidebarCollapse').on("click",function() {
+	  	$('.navbar-collapse').slideToggle();
+		$(this).toggleClass('active');
+	})
+	//メガメニュー
+	$(function(){
+		$('.dropdown-toggle').on('hover',function() {
+	  		$(this).toggleClass('open');
+			$(this).next('.dropdown-menu').slideToggle();
+		});
+	});
+	$(function(){
+		$('.dropdown-toggle').hover(function() {
+	  		$(this).children('.dropdown-menu').addClass('open');
+	  	}, function() {
+	  		$(this).children('.dropdown-menu').removeClass('open');
+	  	});
+	});
+	//スライド1
+	$(function() {
+		$('#slider01').slick({
+		    autoplay: true,
+          	infinite: true, //スライドのループ有効化
+		    autoplaySpeed: 3000,
+		    dots: false,
+		});
+	});
+	//スライド2
+	$(function() {
+		$('#slider02').slick({
+		    autoplay: true,
+          	infinite: true,
+		    autoplaySpeed: 5000,
+		    dots: true,
+		    arrows: true
+		});
+	});
+	//スライド3
+	$(function() {
+		$('.thumb-item').slick({
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          fade: true,
+          asNavFor: '.thumb-item-nav' //サムネイルのクラス名
+     });
+     $('.thumb-item-nav').slick({
+          infinite: true,
+          slidesToShow: 4,  //表示するスライドの数
+          slidesToScroll: 1,
+          asNavFor: '.thumb-item', //スライダー本体のクラス名
+          focusOnSelect: true,
+		  arrows: true,
+     });
+	});
+	//タブ
+	$(function() {
+	  $('.texttab-wrap .nav-item').click(function() {
+	    $('.texttab-wrap .nav-item.active').removeClass('active');
+	    $(this).addClass('active');
+	    $('.texttab-show').removeClass('texttab-show');
+	    // 変数clickedIndexを定義し、クリックしたボタンのインデックス番号を代入してください
+	    const index = $(this).index();
+    
+    	// eqの引数をclickedIndexに書き換えてください
+    	$('.text-pane').eq(index).addClass('texttab-show');
+  		});
+  	});
+	//タブ
+	$(function() {
+	  $('.imgtab-wrap .nav-item').click(function() {
+	    $('.imgtab-wrap .nav-item.active').removeClass('active');
+	    $(this).addClass('active');
+	    $('.imgtab-show').removeClass('imgtab-show');
+	    // 変数clickedIndexを定義し、クリックしたボタンのインデックス番号を代入してください
+	    const index = $(this).index();
+    
+    	// eqの引数をclickedIndexに書き換えてください
+    	$('.img-pane').eq(index).addClass('imgtab-show');
+  		});
+	});
+	//Ajax
+	$(document).ready(function () {
+		header("Access-Control-Allow-Origin: *");
+	    $.getJSON("data.json", function(data){
+	        for(var i in data){
+	        $("#output").append("<li><strong>" + data[i].division + "</strong></li>");
+	            for(var j in data[i].person){
+	                $("#output").append("<li>" + data[i].person[j].name + "（" + data[i].person[j].age + "才）</li>n");
+	            }
+	        }
+	    });
+	});
+
+</script>
+</body>
+</html>
